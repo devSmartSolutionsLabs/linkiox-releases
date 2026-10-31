@@ -7,6 +7,22 @@
       "model": "R5I3",
       "name": "R5I3",
       "hw_rev": "A",
+      "version": "1.0.5",
+      "released": "2026-10-31",
+      "size": 1110032,
+      "sha256": "0b63bbe56feb0f6eb8a6771c90a15fd02054479c3cfd01203d9995a714624fb9",
+      "url": "https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/r5i3/1.0.5/r5i3-1.0.5.bin",
+      "notes": "R5I3 1.0.5 - USB exige PIN para claves/reset; /info expone SSID del AP para onboarding. Base 1.0.4.",
+      "mandatory": false,
+      "sig": "6a4e7c199202391a0c814e09ec2e1837ad5d566e8dae79f181774ac4345a71c465dac66bb133a7d12a3789842cbfe5ed6acc9b8eeae7cf8734fca720b8b947ec",
+      "key_id": "c3f4154e093a2cb4",
+      "signed": true
+    },
+    {
+      "sku": "LXP-R5I3",
+      "model": "R5I3",
+      "name": "R5I3",
+      "hw_rev": "A",
       "version": "1.0.4",
       "released": "2026-10-31",
       "size": 1109984,
@@ -79,6 +95,22 @@
       "notes": "R5I3 1.0.0 - gama Compact. Primera release oficial: 5 reles, 3 DI opto, RTC DS3231, buzzer PWM, OTA A/B firmada con anti-rollback, LXP por Wi-Fi/UART y programas VM.",
       "mandatory": false,
       "sig": "cc52cce08fd36d2c1da2f13d7bc05d39601dc776dcf3e35c224f161345c906f52395f2d40e9534ee3a3c7bd1954dd162f39b85f9a96ffa5dca4cf0fdeca94ca4",
+      "key_id": "c3f4154e093a2cb4",
+      "signed": true
+    },
+    {
+      "sku": "LXP-RD8",
+      "model": "RAIDI8",
+      "name": "SmartController RAIDI8",
+      "hw_rev": "A",
+      "version": "1.0.5",
+      "released": "2026-10-31",
+      "size": 1228752,
+      "sha256": "370941d02b7fba9053ced23ccb2e57b91d59da059febca6c187e5aa374e5ade8",
+      "url": "https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/raidi8/1.0.5/raidi8-1.0.5.bin",
+      "notes": "RAIDI8 1.0.5 - USB exige PIN para claves/reset; /info expone SSID del AP para onboarding. Base 1.0.4.",
+      "mandatory": false,
+      "sig": "27de77ada7afd888722e4397854705f95ba8ccecbe0621fa442f3e88ddb5771fb6d2c75141a703b2d6d08632841207f2706116d2f01c26eaa8cfc72d75ea669b",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     },
@@ -169,18 +201,18 @@
       "model": "R5I3",
       "name": "R5I3",
       "hw_rev": "A",
-      "latest": "1.0.4",
-      "releases": 5
+      "latest": "1.0.5",
+      "releases": 6
     },
     {
       "sku": "LXP-RD8",
       "model": "RAIDI8",
       "name": "SmartController RAIDI8",
       "hw_rev": "A",
-      "latest": "1.0.4",
-      "releases": 5
+      "latest": "1.0.5",
+      "releases": 6
     }
   ],
-  "signature": "5c9bb789a14230b375742149f7aaa7b90f36ed7f53ab239871309f768940e56b1a7f11cd3ceca2955bfdba2b9e36ac89b1d4ffd0e74ece381d28b09cf630c838",
+  "signature": "58bfaa2e707305648306f3a004354a1b15c305000647313a2303cc0a87b61a3614af7f6f49f6cedde89c49fa4ae17d03277f8a89fd0693564255342d77f30274",
   "key_id": "c3f4154e093a2cb4"
 }
