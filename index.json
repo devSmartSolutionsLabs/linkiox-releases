@@ -1,0 +1,56 @@
+{
+  "schema": 2,
+  "updated": "2026-10-31",
+  "releases": [
+    {
+      "sku": "LXP-R5I3",
+      "model": "R5I3",
+      "name": "R5I3",
+      "hw_rev": "A",
+      "version": "1.0.0",
+      "released": "2026-10-31",
+      "size": 1102768,
+      "sha256": "26ccbeeac13f8ac44b5590bc926813e3e32823a646935043e3466b6747655cf9",
+      "url": "https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/r5i3/1.0.0/r5i3-1.0.0.bin",
+      "notes": "R5I3 1.0.0 - gama Compact. Primera release oficial: 5 reles, 3 DI opto, RTC DS3231, buzzer PWM, OTA A/B firmada con anti-rollback, LXP por Wi-Fi/UART y programas VM.",
+      "mandatory": false,
+      "sig": "cc52cce08fd36d2c1da2f13d7bc05d39601dc776dcf3e35c224f161345c906f52395f2d40e9534ee3a3c7bd1954dd162f39b85f9a96ffa5dca4cf0fdeca94ca4",
+      "key_id": "c3f4154e093a2cb4",
+      "signed": true
+    },
+    {
+      "sku": "LXP-RD8",
+      "model": "RAIDI8",
+      "name": "SmartController RAIDI8",
+      "hw_rev": "A",
+      "version": "1.0.0",
+      "released": "2026-10-31",
+      "size": 1221360,
+      "sha256": "df49ce96bc031fc0a542467816807036045d151ccea04cd1638a483c8f7024cd",
+      "url": "https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/raidi8/1.0.0/raidi8-1.0.0.bin",
+      "notes": "RAIDI8 1.0.0 - gama Compact. Primera release oficial: LXP 1.0, OTA A/B firmada con anti-rollback, Modbus RS485, auditoria EEPROM/SD, HMI, programas VM y PWM por salida.",
+      "mandatory": false,
+      "sig": "dc5ad3bbc14ac7f98d3e4c181d92afebc3aa9b1eecaf83d9b95dbc11a78b1fa84130c82adfd6fe8712056f684b485310739a37c614a92ddca6ac65cebf205ba7",
+      "key_id": "c3f4154e093a2cb4",
+      "signed": true
+    }
+  ],
+  "models": [
+    {
+      "sku": "LXP-R5I3",
+      "model": "R5I3",
+      "name": "R5I3",
+      "hw_rev": "A",
+      "latest": "1.0.0",
+      "releases": 1
+    },
+    {
+      "sku": "LXP-RD8",
+      "model": "RAIDI8",
+      "name": "SmartController RAIDI8",
+      "hw_rev": "A",
+      "latest": "1.0.0",
+      "releases": 1
+    }
+  ]
+}
