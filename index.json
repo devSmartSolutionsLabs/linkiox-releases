@@ -116,5 +116,7 @@
       "latest": "1.0.2",
       "releases": 3
     }
-  ]
+  ],
+  "signature": "8b3cfaa05665801b78b88487f042e3993b03bde043193ac525d4e7e6a87cdeb2cf48ac563dc1a3bc438674c1dbce96c1f86dd7f638e261757a40238ca8889544",
+  "key_id": "c3f4154e093a2cb4"
 }
