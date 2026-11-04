@@ -12,8 +12,8 @@ Solo se publican los dos modelos de la **gama Compact**:
 
 | Modelo | SKU | Nombre comercial | MCU | Flash | HW | Última |
 |---|---|---|---|---|---|---|
-| RAIDI8 | `LXP-RD8` | SmartController RAIDI8 | ESP32-S3 | 8 MB | A | **1.0.7** |
-| R5I3 | `LXP-R5I3` | R5I3 | ESP32 | 4 MB | A | **1.0.7** |
+| RAIDI8 | `LXP-RD8` | SmartController RAIDI8 | ESP32-S3 | 8 MB | A | **1.1.0** |
+| R5I3 | `LXP-R5I3` | R5I3 | ESP32 | 4 MB | A | **1.1.0** |
 
 > La gama **Modular** (PLC + módulos IO) es un desarrollo posterior. No hay
 > modelos ni binarios publicados de esa gama todavía.
@@ -27,10 +27,10 @@ puede instalarse aunque se fuerce desde fuera.
 
 ```text
 index.json                              índice de releases (lo consulta la app)
-raidi8/1.0.0/raidi8-1.0.0.bin           binario RAIDI8
-raidi8/1.0.0/RELEASE.md                 notas de la versión
-r5i3/1.0.0/r5i3-1.0.0.bin               binario R5I3
-r5i3/1.0.0/RELEASE.md                   notas de la versión
+raidi8/1.1.0/raidi8-1.1.0.bin           binario RAIDI8
+raidi8/1.1.0/RELEASE.md                 notas de la versión
+r5i3/1.1.0/r5i3-1.1.0.bin               binario R5I3
+r5i3/1.1.0/RELEASE.md                   notas de la versión
 ```
 
 La URL por defecto en la app es:
@@ -39,11 +39,12 @@ La URL por defecto en la app es:
 https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/index.json
 ```
 
-## Versión 1.0.0 — primera release oficial
+## Versión 1.1.0 — mínimo de seguridad
 
-Esta es la **primera release de la gama Compact**. Se reinició el canal para
-eliminar versiones de desarrollo y la placa de banco S3-DEV, que no es un
-producto.
+1.1.0 es la **primera versión que cumple el mínimo de seguridad** (auth por
+roles con sesiones y lockout, clave de programa separada de la de firmware y
+soporte de ceremonia eFuse / Secure Boot). Se purgaron del canal todas las
+versiones anteriores: el índice solo ofrece 1.1.0 en adelante.
 
 ### RAIDI8
 
@@ -84,7 +85,7 @@ r5i3-v1.0.0
       "released": "2026-10-31",
       "size": 1221152,
       "sha256": "...",
-      "url": "https://raw.githubusercontent.com/.../raidi8/1.0.0/raidi8-1.0.0.bin",
+      "url": "https://raw.githubusercontent.com/.../raidi8/1.1.0/raidi8-1.1.0.bin",
       "notes": "...",
       "mandatory": false,
       "sig": "...",
