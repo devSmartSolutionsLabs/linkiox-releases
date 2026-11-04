@@ -26,12 +26,19 @@ puede instalarse aunque se fuerce desde fuera.
 ## Estructura
 
 ```text
-index.json                              índice de releases (lo consulta la app)
-raidi8/1.1.0/raidi8-1.1.0.bin           binario RAIDI8
-raidi8/1.1.0/RELEASE.md                 notas de la versión
-r5i3/1.1.0/r5i3-1.1.0.bin               binario R5I3
-r5i3/1.1.0/RELEASE.md                   notas de la versión
+index.json                          índice de releases (lo consulta la app)
+                                    los .bin NO están en el árbol: viven
+                                    como assets en GitHub Releases
 ```
+
+Cada versión se publica como **GitHub Release** (sección Releases) con:
+
+| Asset | Uso |
+|---|---|
+| `<perfil>-<version>.bin` | App firmware (OTA desde Ops) |
+| `bootloader.bin` | Factory: flash del bootloader |
+| `partition-table.bin` | Factory: tabla de particiones |
+| `ota_data_initial.bin` | Factory: estado inicial OTA (partición activa) |
 
 La URL por defecto en la app es:
 
@@ -65,8 +72,8 @@ versiones anteriores: el índice solo ofrece 1.1.0 en adelante.
 ## Tags
 
 ```text
-raidi8-v1.0.0
-r5i3-v1.0.0
+raidi8-v1.1.0
+r5i3-v1.1.0
 ```
 
 ## Formato de `index.json` (schema 2)

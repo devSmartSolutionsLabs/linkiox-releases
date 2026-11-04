@@ -11,10 +11,10 @@
       "released": "2026-11-04",
       "size": 1132656,
       "sha256": "fdb4b9aa77fba9a99d4767fb9380e1129806c2a288550ed3a949b85974d21a5a",
-      "url": "https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/r5i3/1.1.0/r5i3-1.1.0.bin",
+      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/r5i3-v1.1.0/r5i3-1.1.0.bin",
       "notes": "R5I3 1.1.0 - Auth por roles (login/bootstrap/sesiones), clave de programa separada, soporte de ceremonia eFuse.",
       "mandatory": false,
-      "sig": "3cc8e3a0ccb4b381c7ba03ed3865ce50e14e9ed421f9fd85ec99c604daad403b131c041af2954a550b43a00fe6a9c085e9a2bb76a2f15e58bb5e914e71b1f19b",
+      "sig": "9619e907219818a887c8623cbe88f02a57d96ba0eba7f1d4b6000b37f84f7feefeba2d162d6bfc89f7ecc0eaea529571d108ce1ec99672d6424239594c02eac5",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     },
@@ -27,10 +27,10 @@
       "released": "2026-11-04",
       "size": 1273264,
       "sha256": "86981fde615831c7f535035043d90b73a447eed449b00efa8324cdf905d4e46a",
-      "url": "https://raw.githubusercontent.com/devSmartSolutionsLabs/linkiox-releases/main/raidi8/1.1.0/raidi8-1.1.0.bin",
+      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/raidi8-v1.1.0/raidi8-1.1.0.bin",
       "notes": "RAIDI8 1.1.0 - Auth por roles (login/bootstrap/sesiones), clave de programa separada, soporte de ceremonia eFuse.",
       "mandatory": false,
-      "sig": "29c37e146d790c08332f20e4e47913ba8ccf08bdf4b46014c33f626f20ad5b4b570be4b054007df22fa650f4f27f2481ee8a3bdb3708682ffc97608e40934705",
+      "sig": "5141c1640a03915ece94a03050fd9b726fd86495cfcc3c5e6e9cc42fdd217bebccb55bce813e4d09611789a131a27fc8e71a7de98c6eadace44a91c5dc8bd715",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     }
@@ -53,6 +53,6 @@
       "releases": 1
     }
   ],
-  "signature": "9948a8729b4c0823c6580381d4d9f5ba7fe2501a8ec6045a73c01bffcc35c4a74cd818993165d07c6a2144dfbe7028f475c1f2eb95c52b332ef5b44aabaa3c82",
+  "signature": "47ecbd4d6e6dc7aea3333dfa6efa128e74acd59c7b69035ce914072574cf99948990341cbf29873bdbd665ca558f47434ff0f7443d12a4a07108e9a057348a45",
   "key_id": "c3f4154e093a2cb4"
 }
