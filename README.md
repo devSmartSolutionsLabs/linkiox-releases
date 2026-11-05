@@ -12,8 +12,8 @@ Solo se publican los dos modelos de la **gama Compact**:
 
 | Modelo | SKU | Nombre comercial | MCU | Flash | HW | Última |
 |---|---|---|---|---|---|---|
-| RAIDI8 | `LXP-RD8` | SmartController RAIDI8 | ESP32-S3 | 8 MB | A | **1.2.2** |
-| R5I3 | `LXP-R5I3` | R5I3 | ESP32 | 4 MB | A | **1.2.2** |
+| RAIDI8 | `LXP-RD8` | SmartController RAIDI8 | ESP32-S3 | 8 MB | A | **1.2.3** |
+| R5I3 | `LXP-R5I3` | R5I3 | ESP32 | 4 MB | A | **1.2.3** |
 
 > La gama **Modular** (PLC + módulos IO) es un desarrollo posterior. No hay
 > modelos ni binarios publicados de esa gama todavía.
@@ -72,8 +72,8 @@ versiones anteriores: el índice solo ofrece 1.1.0 en adelante.
 ## Tags
 
 ```text
-raidi8-v1.2.2
-r5i3-v1.2.2
+raidi8-v1.2.3
+r5i3-v1.2.3
 ```
 
 ## Formato de `index.json` (schema 2)

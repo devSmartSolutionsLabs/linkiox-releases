@@ -7,14 +7,14 @@
       "model": "R5I3",
       "name": "R5I3",
       "hw_rev": "A",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "released": "2026-11-04",
       "size": 1139264,
-      "sha256": "1dbaba0439c45c7ed6d6237a8fffa0ca533a8976dd1f6026fde3ee415b148752",
-      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/r5i3-v1.2.2/r5i3-1.2.2.bin",
-      "notes": "R5I3 1.2.2 - Provisionamiento corregido: una unidad sin provisioning reporta 'virgin' (sin identidad de banco). Incluye enrolamiento TOTP por USB (1.2.1).",
+      "sha256": "6f7d07963ba96f25c6bb86a6854bdc82c32eea5224c3b2c9097645cf3780f981",
+      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/r5i3-v1.2.3/r5i3-1.2.3.bin",
+      "notes": "R5I3 1.2.3 - Tabla de particiones en 0x9000 (el build seguro ya compila). NVS en 0xA000, otadata en 0xF000. OTA sin cambios.",
       "mandatory": false,
-      "sig": "277ca94fcbf5eefa8b8ed008032d069caa0563595d70988e62a1927a8b9f8f47d59ed6605241d8068279d32ca3e542c0358fdb293521b052c79dadd090bec410",
+      "sig": "87fdd91338c7ba8569f8c12c5201b58bc07ba4f7a63232713c76820b593c614b54021294a148049463ddfe553342b672e2eeca950ee09fff75d72ec3eee331dd",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     },
@@ -23,14 +23,14 @@
       "model": "RAIDI8",
       "name": "SmartController RAIDI8",
       "hw_rev": "A",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "released": "2026-11-04",
       "size": 1279904,
-      "sha256": "5dce46443f5f1b3d9ff624826109e67540e0c093efc45304744a21348116d9af",
-      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/raidi8-v1.2.2/raidi8-1.2.2.bin",
-      "notes": "RAIDI8 1.2.2 - Provisionamiento corregido: una unidad sin provisioning reporta 'virgin' (sin identidad de banco). Incluye enrolamiento TOTP por USB (1.2.1).",
+      "sha256": "738db92a74464e89ea6cdcbdcb8e4ba07fa96fc5f29e5a0713561a7be0c1d19f",
+      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/raidi8-v1.2.3/raidi8-1.2.3.bin",
+      "notes": "RAIDI8 1.2.3 - Tabla de particiones en 0x9000 (mas margen para el bootloader seguro). NVS en 0xA000, otadata en 0xF000. OTA sin cambios.",
       "mandatory": false,
-      "sig": "42c74ed277c08fd63d50e393b88ccdfd4f1a8b296c14d79d98784dd8bc6bbb448215b1ea57ed1c866c45886c226b5fa3747de5a898bac8f6656633544517dd42",
+      "sig": "ecf76b14ddfd61169cfa411b272602c5ef48425edf1b529aa2e2e54001463f3167d894a622872975ba648768ac827447b6496597c1ae685af6d9df785a6dbcd2",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     }
@@ -41,7 +41,7 @@
       "model": "R5I3",
       "name": "R5I3",
       "hw_rev": "A",
-      "latest": "1.2.2",
+      "latest": "1.2.3",
       "releases": 1
     },
     {
@@ -49,10 +49,10 @@
       "model": "RAIDI8",
       "name": "SmartController RAIDI8",
       "hw_rev": "A",
-      "latest": "1.2.2",
+      "latest": "1.2.3",
       "releases": 1
     }
   ],
-  "signature": "89d2bcf93c5e9bbc75dbd01e9d1dfe8e1c979fe43a68c643e784249cd183a0e86e86b4a8ffeeda77bac36e7c70c07c7a1c22fc2b545b81c5042322d334dcf195",
+  "signature": "e300b03715e3d7b9b25fbe4ccd9fa6033d59c3c8a82c67b338e6200ff0128eeca5735949f85332bdf32f02950eb9d14531ddc54b86fbf2b0b33e378e56cf640f",
   "key_id": "c3f4154e093a2cb4"
 }
