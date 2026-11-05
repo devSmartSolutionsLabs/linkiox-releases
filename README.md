@@ -39,6 +39,7 @@ Cada versión se publica como **GitHub Release** (sección Releases) con:
 | `bootloader.bin` | Factory: flash del bootloader |
 | `partition-table.bin` | Factory: tabla de particiones |
 | `ota_data_initial.bin` | Factory: estado inicial OTA (partición activa) |
+| `secure_boot_pubkey.pem` | Factory: clave **pública** de Secure Boot (quemar digest) |
 
 La URL por defecto en la app es:
 
