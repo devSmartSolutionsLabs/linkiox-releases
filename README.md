@@ -157,6 +157,7 @@ Exclusivas de **RAIDI8**:
   - 2 comparadores por operador.
   - Carrier, fault/brake y sync.
   - Actualización en TEZ/TEP/sync.
+  - Matriz de eventos personalizada por generador (timer/cmp/fault).
   - Capture de 6 canales.
   - Diagnóstico `GET /lxp/v1/hw`.
   - Acción `hw.mcpwm.recover`.
@@ -175,6 +176,10 @@ es el buzzer por LEDC. El resto de la base de firmware es común.
   `freq_max_hz` o fija una `resolution_hz` menor.
 - Carrier: comparte reloj con el grupo. Con `resolution_hz=1 MHz`, debe estar
   aproximadamente entre **1.25 MHz y 20 MHz**; por defecto 2 MHz.
+- El **ESP32‑S3 no tiene matriz ETM** ni trigger ETM de ADC. Esas funciones
+  existen en otros chips (C5/C6/P4), no en RAIDI8. Por eso no se exponen.
+- El generador MCPWM solo puede forzar HIGH, LOW o TOGGLE; no hay estado
+  high‑Z por hardware en la salida PWM.
 
 Requiere App Blocks **0.30.0+46** o superior para los bloques MCPWM.
 
