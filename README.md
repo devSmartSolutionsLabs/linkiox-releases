@@ -199,7 +199,8 @@ es el buzzer por LEDC. El resto de la base de firmware es común.
 - El generador MCPWM solo puede forzar HIGH, LOW o TOGGLE; no hay estado
   high‑Z por hardware en la salida PWM.
 
-Requiere App Blocks **0.30.0+46** o superior para los bloques MCPWM.
+Requiere App Blocks **0.31.0+47** para el bloque de telemetría HTTP y
+**0.30.0+46** para los bloques MCPWM.
 
 ## Capacidades de firmware
 
