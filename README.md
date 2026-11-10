@@ -134,8 +134,26 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.3.0** | 2026-11-10 | Estable | MCPWM completo + capture |
-| `LXP-R5I3` | R5I3 | **1.3.0** | 2026-11-10 | Estable | Base común; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.3.1** | 2026-11-10 | Estable | Telemetría HTTP + MCPWM |
+| `LXP-R5I3` | R5I3 | **1.3.1** | 2026-11-10 | Estable | Telemetría; sin MCPWM |
+
+### Novedades de 1.3.1
+
+Comunes a ambos modelos:
+
+- **Telemetría HTTP/HTTPS**:
+  - conexiones configurables,
+  - publicadores por intervalo y/o cambio,
+  - variables DI/DO/AI/tags,
+  - JSON con `device`, `ts` y `vars`,
+  - cabeceras HTTP,
+  - reintentos y estado en `GET /lxp/v1/comm`.
+- El envío corre fuera del scan: un servidor lento no bloquea la VM.
+- Si el equipo no tiene Wi-Fi, la tarea espera y no envía.
+
+Exclusivo de **RAIDI8**:
+
+- MCPWM completo y capture de 1.3.0.
 
 ### Novedades de 1.3.0
 
@@ -224,6 +242,26 @@ Requiere App Blocks **0.30.0+46** o superior para los bloques MCPWM.
 - Modbus RTU esclavo solo en RAIDI8.
 - Descubrimiento UDP.
 
+### Telemetría HTTP
+
+- Conexiones HTTP/HTTPS configurables.
+- Publicadores con intervalo y/o envío por cambio.
+- Variables: DI, DO, AI, tags y variables internas.
+- JSON:
+
+```json
+{"device":"LXP-RD8-26A-00001","ts":1794354113000,
+ "vars":{"D1":false,"AI1":1,"OUT1":false}}
+```
+
+- Cabeceras personalizadas.
+- Reintento automático.
+- Estado en `GET /lxp/v1/comm`.
+- Configuración firmada dentro del programa (`comm`).
+- La tarea de red espera a que haya Wi-Fi y nunca bloquea el scan.
+
+WebSocket cliente queda para la siguiente fase.
+
 ### Registro y diagnóstico
 
 - Eventos de equipo interpretados en Ops.
@@ -281,6 +319,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-10 | `LXP-RD8` | 1.3.1 | Telemetría HTTP, MCPWM completo y capture |
+| 2026-11-10 | `LXP-R5I3` | 1.3.1 | Telemetría HTTP; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.3.0 | MCPWM completo, capture, diagnóstico `/hw` |
 | 2026-11-10 | `LXP-R5I3` | 1.3.0 | Base común de firmware; sin MCPWM |
 
