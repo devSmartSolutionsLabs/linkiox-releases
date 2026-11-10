@@ -69,9 +69,13 @@ Placa de control y adquisición para procesos con muchas E/S.
 - MCPWM del ESP32‑S3:
   - 2 grupos, 6 canales lógicos.
   - 2 generadores por canal (simple o complementario A/B).
+  - Hasta 12 salidas PWM a nivel de periférico; RAIDI8 expone 5 GPIO.
+  - 3 entradas de fault y 3 de sync por grupo.
   - Dead time, polaridad, carrier, fault/brake, sync, 2 comparadores.
   - Modos de conteo up/down/up‑down.
-  - 6 canales de capture.
+  - Reloj base de 160 MHz y resolución de hasta 6.25 ns.
+  - Timer de 16 bits con resolución automática para ajustar el rango.
+  - 6 canales de capture con timer de 32 bits a 80 MHz (12.5 ns).
 - Alimentación y protecciones según placa; los relés requieren carga y
   aislamiento adecuados.
 
@@ -160,6 +164,17 @@ Exclusivas de **RAIDI8**:
 
 **R5I3 1.3.0 no incluye MCPWM** porque su hardware no expone GPIOs MCPWM; su PWM
 es el buzzer por LEDC. El resto de la base de firmware es común.
+
+**Restricciones MCPWM en RAIDI8**
+
+- GPIO seguros: `GP1=38`, `GP2=47`, `GP4=21`.
+- `GP3=48` y `GP5=14` comparten microSD; requieren `allow_sd`.
+- Un par complementario consume 2 GPIO.
+- Timer de 16 bits. Con `1 Hz…50 kHz`, la resolución automática es `100 kHz` y
+  la frecuencia mínima efectiva queda en **2 Hz**. Para `1 Hz`, baja
+  `freq_max_hz` o fija una `resolution_hz` menor.
+- Carrier: comparte reloj con el grupo. Con `resolution_hz=1 MHz`, debe estar
+  aproximadamente entre **1.25 MHz y 20 MHz**; por defecto 2 MHz.
 
 Requiere App Blocks **0.30.0+46** o superior para los bloques MCPWM.
 

@@ -9,12 +9,12 @@
       "hw_rev": "A",
       "version": "1.3.0",
       "released": "2026-11-10",
-      "size": 1110272,
-      "sha256": "5d844c7099311f90b12560b995b2f39c862801e9aa888baf3bead36fad4c4987",
+      "size": 1110816,
+      "sha256": "9920da3402d365b2defa1742b1e6d5ed47f5bdf71b2376ef2d91815c8bfc9279",
       "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/r5i3-v1.3.0/r5i3-1.3.0.bin",
-      "notes": "R5I3 1.3.0: misma base VM, seguridad y OTA que 1.2.7. Sin MCPWM: el hardware R5I3 usa LEDC para el buzzer.",
+      "notes": "R5I3 1.3.0: misma base VM, seguridad y OTA. Sin MCPWM: el hardware R5I3 usa LEDC para el buzzer.",
       "mandatory": false,
-      "sig": "593d925602b3b71334781e920a2e088f5d2af45a68213acfcdce60f0ad82ce3122dc34232710c3b9e6d74479cf413627bb61f49101a05dbfd67d0ca3dc2702fe",
+      "sig": "1fdd5e04a08fe937eeb56ed63058028df8f30a16d07c57d45fdd31b3f70f884a441069fa73f09afc79b8badd24b33e4048adb9117cfe3ec3b5e60b3c5819f217",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     },
@@ -25,12 +25,12 @@
       "hw_rev": "A",
       "version": "1.3.0",
       "released": "2026-11-10",
-      "size": 1240672,
-      "sha256": "e9e3024bca9276999554d15942bdb7d1d4560a71360ab7048286aff010ed531a",
+      "size": 1241200,
+      "sha256": "3399184482854e0742630b8799e2154732387ac8f572cf86c0ec36dc4858acf1",
       "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/raidi8-v1.3.0/raidi8-1.3.0.bin",
       "notes": "RAIDI8 1.3.0: MCPWM completo (complementario, dead time, carrier, fault/brake, sync, 2 comparadores, capture), modo capture y diagnostico /hw.",
       "mandatory": false,
-      "sig": "b22e8e523820c49e7bbdb275d2b4a7b7017b7b20397ea9b26f6e9cab34959f85d3ecfd59a712eecbf4bf3139e62c682ae098383b8ae423b5759dac3cee239d4f",
+      "sig": "7d38a87750d7434779e1b6b19841f29ef93be071dae82056b090d554060800799f6645c8b739e3cef12460af84b2ed2e95048db3785b4601e63c2f6c00eb2877",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     }
@@ -53,6 +53,6 @@
       "releases": 1
     }
   ],
-  "signature": "010a0762479da4f4f5246a9b2fc7fc6047055fff859e89557f736211755740e54f7524b5314ced00497c562d316e292382457b1b9f641ab80d89ac7044e01748",
+  "signature": "9f58923d7bdebcb40a88fda76313292159ed7243b200ed59d17f8c8f97c0641e02e3b71138406f409be13a18108c98c52c2e0977a9bcda16d8fbf5686681b948",
   "key_id": "c3f4154e093a2cb4"
 }
