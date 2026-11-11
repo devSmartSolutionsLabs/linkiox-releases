@@ -134,8 +134,16 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.4.2** | 2026-11-11 | Estable | Rollback OTA + WSS/TLS + MCPWM |
-| `LXP-R5I3` | R5I3 | **1.4.2** | 2026-11-11 | Estable | Rollback OTA + WSS/TLS; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.3** | 2026-11-11 | Estable | Reanuda programa tras OTA + rollback |
+| `LXP-R5I3` | R5I3 | **1.4.3** | 2026-11-11 | Estable | Reanuda programa tras OTA; sin MCPWM |
+
+### Novedades de 1.4.3
+
+- Tras una OTA o un rollback, si el equipo estaba en RUN, vuelve a cargar el
+  programa activo y entra en RUN automáticamente.
+- Si el blob NVS del programa falta o está ilegible, se recupera desde el
+  repositorio de programas.
+- Un arranque normal por corte de luz sigue entrando en STOP por seguridad.
 
 ### Novedades de 1.4.2
 
@@ -352,6 +360,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-11 | `LXP-RD8` | 1.4.3 | Reanuda programa en RUN tras OTA/rollback |
+| 2026-11-11 | `LXP-R5I3` | 1.4.3 | Reanuda programa tras OTA; sin MCPWM |
 | 2026-11-11 | `LXP-RD8` | 1.4.2 | Rollback OTA manual; WSS/TLS |
 | 2026-11-11 | `LXP-R5I3` | 1.4.2 | Rollback OTA manual; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.4.1 | WSS con verificación TLS; telemetría HTTP/WS |
