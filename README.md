@@ -134,8 +134,16 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.4.3** | 2026-11-11 | Estable | Reanuda programa tras OTA + rollback |
-| `LXP-R5I3` | R5I3 | **1.4.3** | 2026-11-11 | Estable | Reanuda programa tras OTA; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.4** | 2026-11-11 | Estable | Reanuda RUN tras OTA + salidas seguras |
+| `LXP-R5I3` | R5I3 | **1.4.4** | 2026-11-11 | Estable | Reanuda RUN tras OTA; sin MCPWM |
+
+### Novedades de 1.4.4
+
+- Corrige la reanudación tras OTA: se guarda si el equipo estaba en RUN al
+  **iniciar** la actualización.
+- La OTA pasa a STOP y deja las salidas seguras durante la transferencia.
+- Al reiniciar, recupera el programa activo y vuelve a RUN.
+- Logs nuevos para diagnosticar `resume_run`.
 
 ### Novedades de 1.4.3
 
@@ -360,6 +368,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-11 | `LXP-RD8` | 1.4.4 | Reanuda RUN tras OTA; corrige 1.4.3 |
+| 2026-11-11 | `LXP-R5I3` | 1.4.4 | Reanuda RUN tras OTA; sin MCPWM |
 | 2026-11-11 | `LXP-RD8` | 1.4.3 | Reanuda programa en RUN tras OTA/rollback |
 | 2026-11-11 | `LXP-R5I3` | 1.4.3 | Reanuda programa tras OTA; sin MCPWM |
 | 2026-11-11 | `LXP-RD8` | 1.4.2 | Rollback OTA manual; WSS/TLS |
