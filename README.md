@@ -134,8 +134,15 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.4.1** | 2026-11-10 | Estable | WSS+TLS, telemetría HTTP/WS, MCPWM |
-| `LXP-R5I3` | R5I3 | **1.4.1** | 2026-11-10 | Estable | WSS+TLS, telemetría HTTP/WS; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.2** | 2026-11-11 | Estable | Rollback OTA + WSS/TLS + MCPWM |
+| `LXP-R5I3` | R5I3 | **1.4.2** | 2026-11-11 | Estable | Rollback OTA + WSS/TLS; sin MCPWM |
+
+### Novedades de 1.4.2
+
+- **Rollback OTA manual**: acción `ota.rollback` con PIN de ingeniería.
+- Valida la imagen de la otra partición y la marca como arranque.
+- `/info` informa `running_partition` (`ota_0` u `ota_1`).
+- Ops 0.11.25+2070 añade el botón **Hacer rollback**.
 
 ### Novedades de 1.4.1
 
@@ -345,6 +352,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-11 | `LXP-RD8` | 1.4.2 | Rollback OTA manual; WSS/TLS |
+| 2026-11-11 | `LXP-R5I3` | 1.4.2 | Rollback OTA manual; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.4.1 | WSS con verificación TLS; telemetría HTTP/WS |
 | 2026-11-10 | `LXP-R5I3` | 1.4.1 | WSS con verificación TLS; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.4.0 | Telemetría WebSocket, MCPWM completo y capture |
