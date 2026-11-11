@@ -7,6 +7,22 @@
       "model": "R5I3",
       "name": "R5I3",
       "hw_rev": "A",
+      "version": "1.4.0",
+      "released": "2026-11-10",
+      "size": 1294160,
+      "sha256": "e037ec8afbc6dedc0bcc01352e61a9487e5a538082fced19eb72ec943a1c98f3",
+      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/r5i3-v1.4.0/r5i3-1.4.0.bin",
+      "notes": "R5I3 1.4.0: telemetria HTTP/HTTPS y WebSocket (ws/wss) sobre la base VM. Sin MCPWM.",
+      "mandatory": false,
+      "sig": "7a68d0fc5fd7295124fa196301f69d879c4f0d6fb2545f972250e86f66e0e99653f8a8d8878b3eaad3ed9e086b6f68b493c45dd025ce2b849a5338a89f5a89da",
+      "key_id": "c3f4154e093a2cb4",
+      "signed": true
+    },
+    {
+      "sku": "LXP-R5I3",
+      "model": "R5I3",
+      "name": "R5I3",
+      "hw_rev": "A",
       "version": "1.3.1",
       "released": "2026-11-10",
       "size": 1273008,
@@ -31,6 +47,22 @@
       "notes": "R5I3 1.3.0: misma base VM, seguridad y OTA. Sin MCPWM: el hardware R5I3 usa LEDC para el buzzer.",
       "mandatory": false,
       "sig": "87b7b0002bc0da35575eddd8a28cf2865042a2e8155aa4c6f88bb6bed4dcc11592c1d7214501f1d550b9a9d398ace6f7c42ea828782d150b0b62558985572d70",
+      "key_id": "c3f4154e093a2cb4",
+      "signed": true
+    },
+    {
+      "sku": "LXP-RD8",
+      "model": "RAIDI8",
+      "name": "SmartController RAIDI8",
+      "hw_rev": "A",
+      "version": "1.4.0",
+      "released": "2026-11-10",
+      "size": 1425504,
+      "sha256": "1eac22584815e7934e9ce5a9117ec2a26625c862f8a1c8df7c941cf947e7eb84",
+      "url": "https://github.com/devSmartSolutionsLabs/linkiox-releases/releases/download/raidi8-v1.4.0/raidi8-1.4.0.bin",
+      "notes": "RAIDI8 1.4.0: telemetria HTTP/HTTPS y WebSocket (ws/wss), reconexion, cabeceras y estado /comm. MCPWM completo.",
+      "mandatory": false,
+      "sig": "c47052abe8a9e6b038ffec42b9fddcbaee1f9092be636918d6e99b7274f4b3b98e92e6b5580a3a6d5ac73585594b8810169e620dfead9b2e0832f2c6ad4bf017",
       "key_id": "c3f4154e093a2cb4",
       "signed": true
     },
@@ -73,18 +105,18 @@
       "model": "R5I3",
       "name": "R5I3",
       "hw_rev": "A",
-      "latest": "1.3.1",
-      "releases": 2
+      "latest": "1.4.0",
+      "releases": 3
     },
     {
       "sku": "LXP-RD8",
       "model": "RAIDI8",
       "name": "SmartController RAIDI8",
       "hw_rev": "A",
-      "latest": "1.3.1",
-      "releases": 2
+      "latest": "1.4.0",
+      "releases": 3
     }
   ],
-  "signature": "ade37a2cfbffa70908203e2e0d2d38893580b05a086ec34dd37fc27670d93ede0eca401b92dd5f5ccc8123a2f6348ca02840a71b658a987d772de5add8e4803e",
+  "signature": "20cd3cff931a50fd207f47065925eedaa0b66257a4c11f799236f91e0b19d21dce1248218b53ee352cab91162ca01a3a0d13a37f5be7b02636b77d46bd536207",
   "key_id": "c3f4154e093a2cb4"
 }

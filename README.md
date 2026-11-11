@@ -134,8 +134,24 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.3.1** | 2026-11-10 | Estable | Telemetría HTTP + MCPWM |
-| `LXP-R5I3` | R5I3 | **1.3.1** | 2026-11-10 | Estable | Telemetría; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.0** | 2026-11-10 | Estable | Telemetría HTTP/WS + MCPWM |
+| `LXP-R5I3` | R5I3 | **1.4.0** | 2026-11-10 | Estable | Telemetría HTTP/WS; sin MCPWM |
+
+### Novedades de 1.4.0
+
+Comunes a ambos modelos:
+
+- **Telemetría WebSocket**: conexiones `ws://` y `wss://` además de
+  HTTP/HTTPS.
+- Conexión persistente con reconexión en la siguiente publicación.
+- Cabeceras personalizadas en el handshake.
+- Estado en `GET /lxp/v1/comm` con `transport` y `ws_connected`.
+- Se mantiene el envío por intervalo y/o cambio, y la tarea sigue fuera del
+  scan esperando Wi-Fi.
+
+Exclusivo de **RAIDI8**:
+
+- MCPWM completo y capture de 1.3.0.
 
 ### Novedades de 1.3.1
 
@@ -199,8 +215,8 @@ es el buzzer por LEDC. El resto de la base de firmware es común.
 - El generador MCPWM solo puede forzar HIGH, LOW o TOGGLE; no hay estado
   high‑Z por hardware en la salida PWM.
 
-Requiere App Blocks **0.31.0+47** para el bloque de telemetría HTTP y
-**0.30.0+46** para los bloques MCPWM.
+Requiere App Blocks **0.32.0+48** para el transporte WebSocket y
+**0.31.0+47** para el bloque de telemetría HTTP.
 
 ## Capacidades de firmware
 
@@ -243,9 +259,9 @@ Requiere App Blocks **0.31.0+47** para el bloque de telemetría HTTP y
 - Modbus RTU esclavo solo en RAIDI8.
 - Descubrimiento UDP.
 
-### Telemetría HTTP
+### Telemetría HTTP / WebSocket
 
-- Conexiones HTTP/HTTPS configurables.
+- Conexiones HTTP/HTTPS y `ws://`/`wss://`.
 - Publicadores con intervalo y/o envío por cambio.
 - Variables: DI, DO, AI, tags y variables internas.
 - JSON:
@@ -256,12 +272,10 @@ Requiere App Blocks **0.31.0+47** para el bloque de telemetría HTTP y
 ```
 
 - Cabeceras personalizadas.
-- Reintento automático.
-- Estado en `GET /lxp/v1/comm`.
+- Reintento y reconexión automáticos.
+- Estado en `GET /lxp/v1/comm` con `transport` y `ws_connected`.
 - Configuración firmada dentro del programa (`comm`).
 - La tarea de red espera a que haya Wi-Fi y nunca bloquea el scan.
-
-WebSocket cliente queda para la siguiente fase.
 
 ### Registro y diagnóstico
 
@@ -320,6 +334,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-10 | `LXP-RD8` | 1.4.0 | Telemetría WebSocket, MCPWM completo y capture |
+| 2026-11-10 | `LXP-R5I3` | 1.4.0 | Telemetría WebSocket; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.3.1 | Telemetría HTTP, MCPWM completo y capture |
 | 2026-11-10 | `LXP-R5I3` | 1.3.1 | Telemetría HTTP; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.3.0 | MCPWM completo, capture, diagnóstico `/hw` |
