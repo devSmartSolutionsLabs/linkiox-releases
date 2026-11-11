@@ -134,8 +134,17 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.4.0** | 2026-11-10 | Estable | Telemetría HTTP/WS + MCPWM |
-| `LXP-R5I3` | R5I3 | **1.4.0** | 2026-11-10 | Estable | Telemetría HTTP/WS; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.1** | 2026-11-10 | Estable | WSS+TLS, telemetría HTTP/WS, MCPWM |
+| `LXP-R5I3` | R5I3 | **1.4.1** | 2026-11-10 | Estable | WSS+TLS, telemetría HTTP/WS; sin MCPWM |
+
+### Novedades de 1.4.1
+
+- **WSS con verificación TLS**: el cliente WebSocket valida el certificado del
+  servidor contra el bundle de CAs del firmware.
+- Un certificado autofirmado o no confiable se rechaza.
+- Sin cambios de formato: los programas de 1.4.0 siguen siendo válidos.
+- Verificado en RAIDI8 con un WSS público válido y con un WSS autofirmado
+  rechazado.
 
 ### Novedades de 1.4.0
 
@@ -216,7 +225,8 @@ es el buzzer por LEDC. El resto de la base de firmware es común.
   high‑Z por hardware en la salida PWM.
 
 Requiere App Blocks **0.32.0+48** para el transporte WebSocket y
-**0.31.0+47** para el bloque de telemetría HTTP.
+**0.31.0+47** para el bloque de telemetría HTTP. Para `wss://` seguro se
+recomienda firmware **1.4.1+**.
 
 ## Capacidades de firmware
 
@@ -262,6 +272,7 @@ Requiere App Blocks **0.32.0+48** para el transporte WebSocket y
 ### Telemetría HTTP / WebSocket
 
 - Conexiones HTTP/HTTPS y `ws://`/`wss://`.
+- `wss://` valida el certificado del servidor con el bundle de CAs.
 - Publicadores con intervalo y/o envío por cambio.
 - Variables: DI, DO, AI, tags y variables internas.
 - JSON:
@@ -334,6 +345,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-10 | `LXP-RD8` | 1.4.1 | WSS con verificación TLS; telemetría HTTP/WS |
+| 2026-11-10 | `LXP-R5I3` | 1.4.1 | WSS con verificación TLS; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.4.0 | Telemetría WebSocket, MCPWM completo y capture |
 | 2026-11-10 | `LXP-R5I3` | 1.4.0 | Telemetría WebSocket; sin MCPWM |
 | 2026-11-10 | `LXP-RD8` | 1.3.1 | Telemetría HTTP, MCPWM completo y capture |
