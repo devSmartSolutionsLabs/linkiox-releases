@@ -134,8 +134,19 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.4.5** | 2026-11-11 | Estable | Registros EEPROM/microSD para Ops |
-| `LXP-R5I3` | R5I3 | **1.4.5** | 2026-11-11 | Estable | Almacenamiento no disponible; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.6** | 2026-11-11 | Estable | Rotación HMAC + política de EEPROM |
+| `LXP-R5I3` | R5I3 | **1.4.6** | 2026-11-11 | Estable | Rotación HMAC; sin EEPROM de registro |
+
+### Novedades de 1.4.6
+
+- **Rotación limpia de HMAC**: al regenerar la clave se formatea el log y se
+  registra el evento `key` con la fecha.
+- Acción `log.rotate` para rotar manualmente con PIN.
+- **Política de EEPROM** configurable por tipo de evento y severidad mínima
+  (`GET /log/policy`, acción `log.policy`).
+- Los eventos filtrados no van a EEPROM, pero sí al espejo de auditoría en
+  microSD.
+- Ops 0.11.28+2073 permite configurar la política y rotar la clave.
 
 ### Novedades de 1.4.5
 
@@ -379,6 +390,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-11 | `LXP-RD8` | 1.4.6 | Rotación HMAC + política de EEPROM |
+| 2026-11-11 | `LXP-R5I3` | 1.4.6 | Rotación HMAC; sin EEPROM de registro |
 | 2026-11-11 | `LXP-RD8` | 1.4.5 | Registros EEPROM/microSD para Ops |
 | 2026-11-11 | `LXP-R5I3` | 1.4.5 | Almacenamiento no disponible; sin MCPWM |
 | 2026-11-11 | `LXP-RD8` | 1.4.4 | Reanuda RUN tras OTA; corrige 1.4.3 |
