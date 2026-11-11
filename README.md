@@ -134,8 +134,19 @@ compactas y tableros de pocas E/S.
 
 | SKU | Modelo | Versión | Fecha | Estado | Notas |
 |---|---|---|---|---|---|
-| `LXP-RD8` | RAIDI8 | **1.4.4** | 2026-11-11 | Estable | Reanuda RUN tras OTA + salidas seguras |
-| `LXP-R5I3` | R5I3 | **1.4.4** | 2026-11-11 | Estable | Reanuda RUN tras OTA; sin MCPWM |
+| `LXP-RD8` | RAIDI8 | **1.4.5** | 2026-11-11 | Estable | Registros EEPROM/microSD para Ops |
+| `LXP-R5I3` | R5I3 | **1.4.5** | 2026-11-11 | Estable | Almacenamiento no disponible; sin MCPWM |
+
+### Novedades de 1.4.5
+
+- `/sd` y `/log/audit` indican si la microSD está presente, montada y activa.
+- Lectura por chunks de CSV y auditoría, sin cargar el archivo completo en RAM.
+- Ops 0.11.26+2071 añade **Registros del equipo**:
+  - log crítico de EEPROM,
+  - datalogger CSV,
+  - auditoría JSONL,
+  - visor con copia y filtro.
+- En R5I3 se muestra como no disponible (sin microSD ni EEPROM de registro).
 
 ### Novedades de 1.4.4
 
@@ -368,6 +379,8 @@ Este canal se reinició el **2026-11-10** con una publicación limpia.
 
 | Fecha | SKU | Versión | Cambios |
 |---|---|---|---|
+| 2026-11-11 | `LXP-RD8` | 1.4.5 | Registros EEPROM/microSD para Ops |
+| 2026-11-11 | `LXP-R5I3` | 1.4.5 | Almacenamiento no disponible; sin MCPWM |
 | 2026-11-11 | `LXP-RD8` | 1.4.4 | Reanuda RUN tras OTA; corrige 1.4.3 |
 | 2026-11-11 | `LXP-R5I3` | 1.4.4 | Reanuda RUN tras OTA; sin MCPWM |
 | 2026-11-11 | `LXP-RD8` | 1.4.3 | Reanuda programa en RUN tras OTA/rollback |
